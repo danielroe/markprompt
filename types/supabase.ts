@@ -202,6 +202,7 @@ export interface Database {
           access_token: string | null
           expires: number | null
           id: number
+          meta: Json | null
           provider: string | null
           refresh_token: string | null
           refresh_token_expires: number | null
@@ -213,6 +214,7 @@ export interface Database {
           access_token?: string | null
           expires?: number | null
           id?: number
+          meta?: Json | null
           provider?: string | null
           refresh_token?: string | null
           refresh_token_expires?: number | null
@@ -224,6 +226,7 @@ export interface Database {
           access_token?: string | null
           expires?: number | null
           id?: number
+          meta?: Json | null
           provider?: string | null
           refresh_token?: string | null
           refresh_token_expires?: number | null
