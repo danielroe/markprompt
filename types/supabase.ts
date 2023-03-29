@@ -197,6 +197,41 @@ export interface Database {
           value?: string
         }
       }
+      user_access_tokens: {
+        Row: {
+          access_token: string | null
+          expires: number | null
+          id: number
+          provider: string | null
+          refresh_token: string | null
+          refresh_token_expires: number | null
+          scope: string | null
+          state: string | null
+          user_id: string
+        }
+        Insert: {
+          access_token?: string | null
+          expires?: number | null
+          id?: number
+          provider?: string | null
+          refresh_token?: string | null
+          refresh_token_expires?: number | null
+          scope?: string | null
+          state?: string | null
+          user_id: string
+        }
+        Update: {
+          access_token?: string | null
+          expires?: number | null
+          id?: number
+          provider?: string | null
+          refresh_token?: string | null
+          refresh_token_expires?: number | null
+          scope?: string | null
+          state?: string | null
+          user_id?: string
+        }
+      }
       users: {
         Row: {
           avatar_url: string | null

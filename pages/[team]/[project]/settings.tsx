@@ -187,7 +187,7 @@ const ProjectSettingsPage = () => {
         </SettingsCard>
         <SettingsCard
           title="GitHub"
-          description="Scan a public GitHub repository for Markdown files."
+          description="Scan a GitHub repository for Markdown files."
         >
           <Formik
             initialValues={{
@@ -214,7 +214,7 @@ const ProjectSettingsPage = () => {
               <Form>
                 <div className="flex flex-col gap-1 p-4">
                   <p className="mb-1 text-xs font-medium text-neutral-300">
-                    Public repository URL
+                    Repository URL
                   </p>
                   <Field
                     type="text"
