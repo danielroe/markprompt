@@ -7,8 +7,6 @@ import {
   shouldIncludeFileWithPath,
 } from './utils';
 
-const JSZip = require('jszip');
-
 const octokit = new Octokit();
 
 const parseGitHubURL = (url: string) => {
@@ -147,4 +145,20 @@ export const getGitHubMDFiles = async (url: string): Promise<FileData[]> => {
       name: getNameFromPath(fileData.path),
     };
   });
+};
+
+export const getAppInstallations = async (accessToken: string) => {
+  const res = await fetch('https://api.github.com/app/installations', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/vnd.github+json',
+      Authorization: `Bearer ${accessToken}`,
+      'X-GitHub-Api-Version': '2022-11-28',
+    },
+  });
+  if (!res.ok) {
+    console.error('Unable to fetch list of installations');
+    return [];
+  }
+  return res.json();
 };
