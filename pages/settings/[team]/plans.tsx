@@ -273,7 +273,7 @@ const PricingCard = ({
 };
 
 const Team = () => {
-  const { team, loading } = useTeam();
+  const { team } = useTeam();
   const [model, setModel] = useState<PricedModel>('gpt-3.5-turbo');
   const [hasSwitched, setHasSwitched] = useState(false);
 
